@@ -126,7 +126,7 @@ const translations = {
   },
   ku: {
     // Navigation
-    "nav.home": "خانە",
+    "nav.home": "سەرەتا",
     "nav.videos": "ڤیدیۆکان",
     "nav.about": "دەربارە",
     "nav.social": "سۆشیال میدیا",

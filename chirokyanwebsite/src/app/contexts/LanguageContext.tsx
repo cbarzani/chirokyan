@@ -46,7 +46,7 @@ const translations = {
     "about.stat1.label": "Total Views",
     "about.stat2.number": "20+",
     "about.stat2.label": "Episodes",
-    "about.stat3.number": "50K+",
+    "about.stat3.number": "100K+",
     "about.stat3.label": "Followers",
     "about.founder.title": "Meet the Founder",
     "about.founder.name": "Doctor Hazhar Salam",
@@ -102,9 +102,9 @@ const translations = {
     "social.facebook.handle": "chirokyan",
     "social.tiktok.handle": "@chirokyann",
     "social.youtube.followers": "140K+ Subscribers",
-    "social.instagram.followers": "50K+ Followers",
+    "social.instagram.followers": "75K+ Followers",
     "social.facebook.followers": "Connections",
-    "social.tiktok.followers": "50K+ Followers",
+    "social.tiktok.followers": "100K+ Followers",
 
     // Contact Section
     "contact.title": "Get In Touch",
@@ -120,7 +120,7 @@ const translations = {
 
     // Footer
     "footer.rights": "© 2026 چیرۆکیان. All rights reserved.",
-    "footer.madeBy": "made by dolamari",
+    "footer.madeBy": "made by چیا",
     "footer.tagline":
       "Every story matters. Every voice counts.",
   },
@@ -189,7 +189,7 @@ const translations = {
       "عیرفانی وەستا محمد [حەمە دەمبڵ] چیرۆکی ژیانی خۆی دەگێڕێتەوە",
     "popular.episode2.title": "زۆرترین بینراو #2",
     "popular.episode2.description":
-      "د.فەرهاد پیربەڵ چیرۆکی ژیانی خۆی دەگێڕێتەوە",
+      "د.فەرهاد پیرباڵ چیرۆکی ژیانی خۆی دەگێڕێتەوە",
     "popular.episode3.title": "زۆرترین بینراو #3",
     "popular.episode3.description":
       "م.ئەحمەد شافعی چیرۆکی ژیانی خۆی دەگێڕێتەوە",
@@ -208,9 +208,9 @@ const translations = {
     "social.facebook.handle": "chirokyan",
     "social.tiktok.handle": "@chirokyann",
     "social.youtube.followers": "140K+ سەبسکرایبس",
-    "social.instagram.followers": "50K+ فۆڵۆوەر",
+    "social.instagram.followers": "75K+ فۆڵۆوەر",
     "social.facebook.followers": "پەیوەندی",
-    "social.tiktok.followers": "50K+ فۆڵۆوەر",
+    "social.tiktok.followers": "100K+ فۆڵۆوەر",
 
     // Contact Section
     "contact.title": "پەیوەندیمان پێوە بکە",
@@ -226,7 +226,7 @@ const translations = {
 
     // Footer
     "footer.rights": "© 2026 چیرۆکیان. هەموو مافێک پارێزراوە.",
-    "footer.madeBy": "made by dolamari",
+    "footer.madeBy": "made by چیا",
     "footer.tagline":
       "هەموو چیرۆکێک گرنگە. هەموو دەنگێک دەژمێردرێت.",
   },
@@ -314,9 +314,9 @@ const translations = {
     "social.facebook.handle": "chirokyan",
     "social.tiktok.handle": "@chirokyann",
     "social.youtube.followers": "140K+ Subscribers",
-    "social.instagram.followers": "50K+ متابعين",
+    "social.instagram.followers": "75K+ متابعين",
     "social.facebook.followers": "تواصل",
-    "social.tiktok.followers": "50K+ متابعين",
+    "social.tiktok.followers": "100K+ متابعين",
 
     // Contact Section
     "contact.title": "تواصل معنا",
@@ -332,7 +332,7 @@ const translations = {
 
     // Footer
     "footer.rights": "© 2026 چیرۆکیان. جميع الحقوق محفوظة.",
-    "footer.madeBy": "made by dolamari",
+    "footer.madeBy": "made by چیا",
     "footer.tagline": "كل قصة مهمة. كل صوت ُحسُّن.",
   },
 };

@@ -6,7 +6,7 @@ export function SEO() {
 
   const seoContent = {
     en: {
-      title: 'Chirokyan Podcast - Stories, Interviews & Inspiring Conversations',
+      title: 'Chirokyan Podcast ',
       description: 'Chirokyan is a professional podcast featuring engaging stories, interviews, and inspiring conversations. Watch our latest episodes, connect with us on social media, and discover compelling content.',
       keywords: 'Chirokyan, podcast, stories, interviews, conversations, Kurdish podcast, videos, episodes, Doctor Hazhar Salam',
       ogTitle: 'Chirokyan Podcast - Watch Our Latest Episodes',
@@ -15,7 +15,7 @@ export function SEO() {
       twitterDescription: 'Engaging stories, interviews & inspiring conversations. Watch our latest episodes now!'
     },
     ku: {
-      title: 'پۆدکاستی چیرۆکیان - چیرۆک، چاوپێکەوتن و گفتوگۆی هانبەخش',
+      title: 'پۆدکاستی چیرۆکیان',
       description: 'چیرۆکیان پۆدکاستێکی پیشەییە کە چیرۆک، چاوپێکەوتن و گفتوگۆی سەرنجڕاکێش پێشکەش دەکات. تەماشای تازەترین ئەڵقەکانمان بکە و لەگەڵمان بەستراوبە لە تۆڕە کۆمەڵایەتییەکان.',
       keywords: 'چیرۆکیان، پۆدکاست، چیرۆک، چاوپێکەوتن، گفتوگۆ، پۆدکاستی کوردی، ڤیدیۆ، ئەڵقە، دکتۆر هەژار سەلام',
       ogTitle: 'پۆدکاستی چیرۆکیان - تەماشای تازەترین ئەڵقەکان',
@@ -24,7 +24,7 @@ export function SEO() {
       twitterDescription: 'چیرۆک، چاوپێکەوتن و گفتوگۆی هانبەخش. تەماشای تازەترین ئەڵقەکانمان بکە!'
     },
     ar: {
-      title: 'بودكاست چیرۆکیان - قصص، مقابلات ومحادثات ملهمة',
+      title: 'بودكاست چیرۆکیان',
       description: 'چیرۆکیان هو بودكاست احترافي يقدم قصصًا جذابة ومقابلات ومحادثات ملهمة. شاهد أحدث حلقاتنا وتواصل معنا على وسائل التواصل الاجتماعي.',
       keywords: 'چیرۆکیان، بودكاست، قصص، مقابلات، محادثات، بودكاست كردي، فيديوهات، حلقات، الدكتور هەژار سەلام',
       ogTitle: 'بودكاست چیرۆکیان - شاهد أحدث حلقاتنا',

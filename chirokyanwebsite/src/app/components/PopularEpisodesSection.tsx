@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, TrendingUp, X, ExternalLink } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { reveal, revealAt } from './reveal';
 
 const popularEpisodes = [
   {
@@ -44,10 +45,7 @@ export function PopularEpisodesSection() {
     <section id="popular" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
+          {...reveal}
           className="text-center mb-12"
         >
           <h2 className="text-4xl text-[#5a4a3a] mb-4">{t('popular.title')}</h2>
@@ -57,24 +55,17 @@ export function PopularEpisodesSection() {
           {popularEpisodes.map((episode, index) => (
             <motion.div
               key={episode.id}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
+              {...revealAt(index)}
               whileHover={{ y: -10, scale: 1.03 }}
               onClick={() => setActiveVideo(episode)}
               className="bg-[#f5f1e8] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group cursor-pointer relative"
             >
               {/* Ranking Badge */}
-              <motion.div
-                initial={{ scale: 0, rotate: -180 }}
-                whileInView={{ scale: 1, rotate: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.15 + 0.2, type: "spring" }}
+              <div
                 className="absolute top-4 left-4 z-10 w-10 h-10 bg-[#5a4a3a] text-[#d4c5a9] rounded-full flex items-center justify-center shadow-lg"
               >
                 <span className="text-lg">#{index + 1}</span>
-              </motion.div>
+              </div>
 
               <div className="relative aspect-video overflow-hidden">
                 <img

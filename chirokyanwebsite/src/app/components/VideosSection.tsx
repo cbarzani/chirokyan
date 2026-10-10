@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Youtube, MousePointerClick, X, ExternalLink } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { reveal, revealAt } from './reveal';
 
 const videos = [
   {
@@ -35,10 +36,7 @@ export function VideosSection() {
     <section id="videos" className="py-20 bg-[#f5f1e8]">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
+          {...reveal}
           className="text-center mb-12"
         >
           <h2 className="text-4xl text-[#5a4a3a] mb-4">{t('videos.title')}</h2>
@@ -52,10 +50,7 @@ export function VideosSection() {
             <motion.div
               key={video.id}
               onClick={() => setActiveVideo(video)}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              {...revealAt(index)}
               whileHover={{ y: -8, scale: 1.02 }}
               className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group cursor-pointer"
             >
@@ -82,10 +77,7 @@ export function VideosSection() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          {...reveal}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-[#5a4a3a] to-[#6a5a4a] rounded-2xl p-8 max-w-2xl mx-auto shadow-2xl">

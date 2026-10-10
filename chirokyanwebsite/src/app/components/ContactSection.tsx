@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Mail, MessageCircle, Phone } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { reveal } from './reveal';
 
 export function ContactSection() {
   const { t } = useLanguage();
@@ -11,10 +12,7 @@ export function ContactSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
+            {...reveal}
             className="text-center mb-12"
           >
             <h2 className="text-4xl text-[#5a4a3a] mb-4">{t('contact.title')}</h2>
@@ -25,10 +23,7 @@ export function ContactSection() {
 
           {/* Quick Contact Options */}
           <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            {...reveal}
             className="bg-gradient-to-r from-[#5a4a3a] to-[#6a5a4a] p-8 rounded-xl text-center"
           >
             <h3 className="text-2xl text-[#d4c5a9] mb-4">{t('contact.title')}</h3>

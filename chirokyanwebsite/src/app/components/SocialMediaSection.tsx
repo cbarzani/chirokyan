@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Youtube, Instagram, Facebook, Music } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { reveal, revealAt } from './reveal';
 
 export function SocialMediaSection() {
   const { t } = useLanguage();
@@ -56,10 +57,7 @@ export function SocialMediaSection() {
     <section className="py-20 bg-[#5a4a3a]">
       <div className="container mx-auto px-4">
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
+          {...reveal}
           className="text-center mb-12"
         >
           <h2 className="text-4xl text-[#d4c5a9] mb-4">{t('social.title')}</h2>
@@ -77,10 +75,7 @@ export function SocialMediaSection() {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                {...revealAt(index)}
                 whileHover={{ y: -10, scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
                 className={`group flex flex-col items-center p-8 bg-white/10 rounded-xl hover:scale-105 transition-all duration-300 ${social.color}`}

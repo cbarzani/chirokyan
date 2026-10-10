@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Youtube, Instagram, Facebook, Music, Heart } from 'lucide-react';
 import logo from 'figma:asset/7fc9c1905014b2b3d0522772c0d5c965aaf19405.png';
 import { useLanguage } from '../contexts/LanguageContext';
+import { reveal } from './reveal';
 
 export function Footer() {
   const { t, language } = useLanguage();
@@ -14,10 +15,7 @@ export function Footer() {
         <div className={`grid md:grid-cols-3 gap-8 mb-8 ${isRTL ? 'text-right' : 'text-left'}`}>
           {/* Brand */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            {...reveal}
           >
             <div className={`flex items-center gap-3 mb-4 ${isRTL ? 'flex-row-reverse' : 'flex-row'}`}>
               <img src={logo} alt="Podcast Logo" className="h-10 w-10 object-contain" />
@@ -30,10 +28,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            {...reveal}
           >
             <h3 className="text-[#d4c5a9] mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -78,10 +73,7 @@ export function Footer() {
 
           {/* Social Media */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            {...reveal}
           >
             <h3 className="text-[#d4c5a9] mb-4">{t('social.title')}</h3>
             <div className={`flex gap-4 ${isRTL ? 'flex-row-reverse' : 'flex-row'}`}>
@@ -132,10 +124,7 @@ export function Footer() {
         </div>
 
         <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          {...reveal}
           className="border-t border-white/10 pt-8"
         >
           <p className="text-white/70 text-center">

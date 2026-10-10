@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Calendar, MapPin, Mic2, Users } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { reveal, revealAt } from './reveal';
 
 export function AboutSection() {
   const { t } = useLanguage();
@@ -11,10 +12,7 @@ export function AboutSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
+            {...reveal}
             className="text-center mb-12"
           >
             <h2 className="text-4xl text-[#5a4a3a] mb-4">{t('about.title')}</h2>
@@ -31,10 +29,7 @@ export function AboutSection() {
             ].map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, delay: stat.delay }}
+                {...revealAt(index)}
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
                 className="bg-[#f5f1e8] p-6 rounded-xl text-center"
               >
